@@ -1,0 +1,89 @@
+@layer components {
+  /* ------------------------- Default Header -------------------------------------------------- */
+
+  .default-header {
+    padding-top: 30vh;
+  }
+
+  .default-header h1 {
+    transform: translateX(-0.025em);
+  }
+
+  .default-header .flex-col.right h1 {
+    transform: translateX(0.025em);
+  }
+
+  .default-header .header-text {
+    padding-top: 2em;
+  }
+
+  .default-header .icon-sprite {
+    width: 0.95em;
+    height: 0.95em;
+  }
+
+  .default-header h1[lang] {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  /* Data Change Color */
+  .section.data-change-color-section,
+  .section-wrap.data-change-color-section {
+    background: transparent;
+  }
+
+  .data-change-color-main {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color var(--animation-thumb);
+    opacity: 0.1;
+  }
+
+  /* Cafe Image */
+  @media (hover: hover) {
+    .single-image {
+      transition: all var(--animation-thumb);
+      position: relative;
+      display: block;
+    }
+
+    .single-image .cafe-image {
+      transition: var(--animation-thumb);
+    }
+
+    .single-image.hover .cafe-image {
+      border-radius: 100%;
+    }
+
+    .single-image .cafe-image {
+      transform: scale(1) rotate(0.001deg);
+      transition: var(--animation-thumb);
+    }
+
+    .single-image.hover .cafe-image {
+      transform: scale(1) rotate(0.001deg);
+      transform: scale(1.1) rotate(0.001deg);
+    }
+
+    /* Not Hover - siblings */
+    .image-grid .single-image.no-hover{
+      opacity: 0.15;
+      filter: grayscale(1) contrast(1) ;
+      transform: scale(0.9) rotate(0.50deg);
+    }
+
+    /* Data Change Color */
+
+   .data-change-color-main {
+      display: block;
+   }
+  }
+}
