@@ -16,10 +16,7 @@ import {
 import useScrollDirection from "./hooks/useScrollClass";
 import { Footer } from "./components/modules";
 
-export const metadata = {
-  title: "Sip & Savor Cafe",
-  description: "Get Ready To Be Amazed",
-};
+
 
 export default function RootLayout({ children }) {
   useSmoothScroll();
